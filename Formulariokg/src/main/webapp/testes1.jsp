@@ -1,7 +1,7 @@
 <%-- 
     Document   : testes1
     Created on : 24/10/2019, 10:14:33
-    Author     : aluno
+    Author     : Klarynny e Gabriel
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

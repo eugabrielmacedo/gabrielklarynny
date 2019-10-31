@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 17/10/2019, 09:25:50
-    Author     : gabriel e klarynny
+    Author     : Gabriel e Klarynny
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,6 +27,7 @@
  </head>
 
  <body>
+     <%@include file="WEB-INF/jspf/menutop.jspf" %>
   <h1> Formulário HTML js</h1> 
   <h2> Preencha o formulário abaixo</h2><br />
 

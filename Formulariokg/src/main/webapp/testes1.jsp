@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%@include file="WEB-INF/jspf/menutop.jspf" %>
+        <h1>Hello World! You really do exist, uh!</h1>
     </body>
 </html>

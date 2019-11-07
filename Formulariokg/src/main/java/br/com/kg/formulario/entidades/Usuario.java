@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.kg.formulariokg;
+package br.com.kg.formulario.entidades;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

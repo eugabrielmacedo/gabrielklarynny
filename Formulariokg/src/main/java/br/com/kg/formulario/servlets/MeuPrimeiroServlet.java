@@ -50,7 +50,7 @@ public class MeuPrimeiroServlet extends HttpServlet {
         user.setIdUsuario(id);
         
         Session sessaoBD = HibernateUtil.getSession();
-        Transaction tr = sessaoBD.getTransaction();
+        Transaction tr = sessaoBD.beginTransaction();
         sessaoBD.save(user);
         tr.commit();
         sessaoBD.close();

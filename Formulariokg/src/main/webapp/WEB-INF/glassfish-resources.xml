@@ -7,6 +7,8 @@
         <property name="databaseName" value="crud"/>
         <property name="User" value="postgres"/>
         <property name="Password" value="postgres"/>
+        <property name="cpf" value="postgres"/>
+        <property name="rg" value="postgres"/>
         <property name="URL" value="jdbc:postgresql://localhost:5432/crud"/>
         <property name="driverClass" value="org.postgresql.Driver"/>
     </jdbc-connection-pool>

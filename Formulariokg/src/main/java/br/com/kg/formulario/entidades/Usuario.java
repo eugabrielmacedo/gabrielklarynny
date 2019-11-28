@@ -29,6 +29,12 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha")})
 public class Usuario implements Serializable {
 
+    @Size(max = 2147483647)
+    @Column(name = "end_municipio")
+    private String endMunicipio;
+    @Column(name = "end_cep")
+    private Integer endCep;
+
     private static final long serialVersionUID = 1L;
   
     @Id
@@ -42,7 +48,7 @@ public class Usuario implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "senha")
     private String senha;
-    private SingularAttribute<Usuario, String> cpf;
+    private String cpf;
     private String rg;
 
     public Usuario() {
@@ -76,8 +82,8 @@ public class Usuario implements Serializable {
         this.senha = senha;
     }
     
-        public void setcpf (string cpf) {
-        this.cpf = (SingularAttribute<Usuario, String>) cpf;
+        public void setcpf (String cpfK) {
+        this.cpf = cpfK;
     }
         
         public void setrg (String rg) {
@@ -108,6 +114,22 @@ public class Usuario implements Serializable {
     @Override
     public String toString() {
         return "br.com.kg.formulariokg.Usuario[ idUsuario=" + idUsuario + " ]";
+    }
+
+    public String getEndMunicipio() {
+        return endMunicipio;
+    }
+
+    public void setEndMunicipio(String endMunicipio) {
+        this.endMunicipio = endMunicipio;
+    }
+
+    public Integer getEndCep() {
+        return endCep;
+    }
+
+    public void setEndCep(Integer endCep) {
+        this.endCep = endCep;
     }
     
 }

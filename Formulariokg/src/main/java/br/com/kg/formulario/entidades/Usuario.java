@@ -1,12 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.kg.formulario.entidades;
 
+import static br.com.kg.formulario.entidades.Usuario_.cpf;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import static javafx.scene.effect.BlendMode.ADD;
+import static javassist.CtMethod.ConstParameter.string;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,14 +13,12 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.metamodel.SingularAttribute;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author aluno
- */
+
 @Entity
 @Table(name = "usuario")
 @XmlRootElement
@@ -33,7 +30,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+  
     @Id
     @Basic(optional = false)
     @NotNull
@@ -45,6 +42,8 @@ public class Usuario implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "senha")
     private String senha;
+    private SingularAttribute<Usuario, String> cpf;
+    private String rg;
 
     public Usuario() {
     }
@@ -76,7 +75,17 @@ public class Usuario implements Serializable {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    
+        public void setcpf (string cpf) {
+        this.cpf = (SingularAttribute<Usuario, String>) cpf;
+    }
+        
+        public void setrg (String rg) {
+        this.rg = rg;
+    }
 
+        
+       
     @Override
     public int hashCode() {
         int hash = 0;
@@ -86,7 +95,6 @@ public class Usuario implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Usuario)) {
             return false;
         }

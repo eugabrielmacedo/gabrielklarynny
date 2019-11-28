@@ -116,7 +116,7 @@
 </fieldset>
 
 <br />
-<!-- ENDEREÇO -->
+<%-- ENDEREÇO -->
 <fieldset>
  <legend>Dados de Endereço</legend>
  <div>
@@ -171,7 +171,7 @@
     <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
    </div>
 </fieldset>
-<br />
+<br /--%>
 
 <!-- DADOS DE LOGIN -->
 <fieldset>
